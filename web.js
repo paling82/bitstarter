@@ -3,10 +3,10 @@ var fs = require('fs');
 
 var app = express.createServer(express.logger());
 
-var buffer = fs.readFileSync('index.html', null);
+//var buffer = fs.readFileSync('index.html', null);
 
 app.get('/', function(request, response) {
-  response.send(buffer.write("utf-8"));
+  response.send("Je stinkt vuile Heroku");
 });
 
 var port = process.env.PORT || 5000;
