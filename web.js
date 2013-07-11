@@ -6,7 +6,7 @@ var app = express.createServer(express.logger());
 var buffer = fs.readFileSync('index.html', null);
 
 app.get('/', function(request, response) {
-  response.send("Je stinkt vuile Heroku");
+  response.send(buffer.toString("utf8"));
 });
 
 var port = process.env.PORT || 5000;
